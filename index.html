@@ -12,7 +12,7 @@
 <body class="container">
     <header class="text-center mt-5">
         <h1 class="mb-4">AI Universe Hub</h1>
-        <button type="button" class="btn btn-danger mb-4">Sort By Date</button>
+        <button id="btn-sort" type="button" class="btn btn-danger mb-4">Sort By Date</button>
     </header>
 
     <main>
@@ -40,32 +40,69 @@
         <!-- Modal -->
         <section>
   <div class="modal fade" id="aiInfoModal" tabindex="-1" aria-labelledby="aiInfoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class=" text-end">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body ">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
 
+          <button type="button" class="btn-close ms-5" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">         
+          <div>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                  <div class="card h-100">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a short card.</p>
+                  <div class="card">
+                    <div class="card-body bg-light">
+                      <h6 id="modal-description" class=" pb-3 "></h6>
+                      <div class="d-flex justify-content-around pb-2 text-center">
+                        <div class="border mx-1  bg-success p-2 rounded ">
+                            <p class="text-white fw-bolder" id="plan-detail">h1</p>
+                            <p class="text-white fw-bolder" id="price-detail"> </p>
+                        </div>
+                       
+                        <div class="border mx-1  bg-success p-2 rounded ">
+                            <p class="text-white fw-bolder" id="plan1-detail">h1</p>
+                            <p  class="text-white fw-bolder" id="price1-detail"> </p>
+                        </div>
+                        <div class="border mx-1  bg-success p-2 rounded ">
+                            <p class="text-white fw-bolder" id="plan2-detail">h1</p>
+                            <p class="text-white fw-bolder" id="price2-detail"> </p>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-between mt-3">
+                        <div>
+                            <h1>Features</h1>
+                            <ul>
+                                <li id="ai-hub-feature1"></li>
+                                <li id="ai-hub-feature2"></li>
+                                <li id="ai-hub-feature3"></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h1>Integrations</h1>
+                            <ul>
+                                <li id="ai-hub-Integrations1"></li>
+                                <li id="ai-hub-Integrations2"></li>
+                                <li id="ai-hub-Integrations3"></li>
+                            </ul>
+                        </div>
+                    </div>
+                     
+
                     </div>
                   </div>
                 </div>
+                <div class="col">
+                  <div class="card">
+                    <img src=" " class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"></p>
+                    </div>
                   </div>
+                </div>
+              </div>
+        </div>
                 </div>
               </div>
         </div>  

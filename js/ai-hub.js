@@ -34,7 +34,7 @@ const displayAi = aiHubs =>{
         <p class="fs-6 "><i class="fa-solid fa-calendar-days"></i> ${ai.published_in}</p>
       </div>
       <div>
-      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#aiInfoModal">More Info</button>
+      <button onclick="showAiDetailModal('${ai.id}')"  type="button"  class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#aiInfoModal">More Info</button>
       </div>   
     </div>
     </div>
@@ -72,14 +72,79 @@ else{
 }
 }
 
-// const loadAiDetails = async id =>{
-//   const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
-//   const res = await fetch(url);
-//     const data = await res.json();
-//     displayAiDetails(data.data);
-// }
 
-// const displayAiDetails = ai =>{
-//   console.log(ai);
-// }
+
+const showAiDetailModal= id =>{
+  const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`
+  fetch(url)
+  .then(response=> response.json())
+  .then(data=> modalDetail(data.data))
+}
+
+
+const modalDetail= modalDetail =>{
+  const aiModalDescription= document.getElementById('modal-description')
+  aiModalDescription.innerText= modalDetail.description
+
+  const planDetailField= document.getElementById('plan-detail')
+  planDetailField.innerText= modalDetail.pricing[0].plan
+
+  const priceDetailField= document.getElementById('price-detail')
+  priceDetailField.innerText= modalDetail.pricing[0].price
+
+  const planDetailField1= document.getElementById('plan1-detail')
+  planDetailField1.innerText= modalDetail.pricing[1].plan
+
+
+  const priceDetailField1= document.getElementById('price1-detail')
+  priceDetailField1.innerText= modalDetail.pricing[1].price
+  
+
+  const planDetailField2= document.getElementById('plan2-detail')
+  planDetailField2.innerText= modalDetail.pricing[2].plan
+
+
+  const priceDetailField2= document.getElementById('price2-detail')
+  priceDetailField2.innerText= modalDetail.pricing[2].price
+
+  const featuresDetail = document.getElementById('modal-features')
+
+
+  // for feature
+  const aiHubFeatureTitle= document.getElementById('ai-hub-feature1')
+  aiHubFeatureTitle.innerText= modalDetail.features['1'].feature_name
+
+  const aiHubFeatureTitle2= document.getElementById('ai-hub-feature2')
+  aiHubFeatureTitle2.innerText= modalDetail.features['2'].feature_name
+
+  const aiHubFeatureTitle3= document.getElementById('ai-hub-feature3')
+  aiHubFeatureTitle3.innerText= modalDetail.features['3'].feature_name
+
+
+  // for integration
+  const aiHubIntegrationsTitle1= document.getElementById('ai-hub-Integrations1')
+  aiHubIntegrationsTitle1.innerText= modalDetail.integrations[0]
+
+  const aiHubIntegrationsTitle2= document.getElementById('ai-hub-Integrations2')
+  aiHubIntegrationsTitle2.innerText= modalDetail.integrations[1]
+  const aiHubIntegrationsTitle3= document.getElementById('ai-hub-Integrations3')
+  aiHubIntegrationsTitle3.innerText= modalDetail.integrations[2]
+  
+}
+
+
+
+
+
 loadAiHub();
+
+
+
+
+
+
+
+
+
+
+
