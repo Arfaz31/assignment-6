@@ -131,17 +131,21 @@ const modalDetail= modalDetail =>{
   aiHubIntegrationsTitle3.innerText= modalDetail.integrations[2]
 
 
-  // second div
-const secondDiv = document.getElementById('second-div')
-secondDiv.innerHTML = `
-<div class="card text-bg-dark">
-   <img id="card-img" src="${modalDetail.features.image}" class="card-img" alt="...">
-   <div class="card-img-overlay">
-     <h5 class="card-title">Hi, how are you doing today?</h5>
-   </div>
-</div>
+// card-2 image and feature
+const imageBody= document.getElementById('image-body')
+imageBody.innerHTML=`
+<img src="${modalDetail.image_link[0]}" class="card-img" alt="...">`
 
-`
+const btnAccurecy= document.getElementById('btn-accuracy')
+btnAccurecy.innerText= modalDetail.accuracy.score ? modalDetail.accuracy.score * 100 : 'no'
+
+const imageText= document.getElementById('image-text')
+imageText.innerText= modalDetail.input_output_examples[0].input ? modalDetail.input_output_examples[0].input : 'no data found'
+
+const imageText2= document.getElementById('image-text2')
+imageText2.innerText= modalDetail.accuracy.description ? modalDetail.accuracy.description : 'no data found'
+
+
   
 }
 
