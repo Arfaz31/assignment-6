@@ -106,14 +106,14 @@ const modalDetail= modalDetail =>{
 
 
   // for feature
-  const aiHubFeatureTitle= document.getElementById('ai-hub-feature1')
-  aiHubFeatureTitle.innerText= modalDetail.features['1'].feature_name
+  const aiHubFeatureTitle = document.getElementById("ai-hub-feature1");
+  aiHubFeatureTitle.innerText = modalDetail.features["1"].feature_name ? modalDetail.features["1"].feature_name : 'No data found';
 
-  const aiHubFeatureTitle2= document.getElementById('ai-hub-feature2')
-  aiHubFeatureTitle2.innerText= modalDetail.features['2'].feature_name
+  const aiHubFeatureTitle2 = document.getElementById("ai-hub-feature2");
+  aiHubFeatureTitle2.innerText = modalDetail.features["2"].feature_name ? modalDetail.features["2"].feature_name : 'No data found';
 
-  const aiHubFeatureTitle3= document.getElementById('ai-hub-feature3')
-  aiHubFeatureTitle3.innerText= modalDetail.features['3'].feature_name
+  const aiHubFeatureTitle3 = document.getElementById("ai-hub-feature3");
+  aiHubFeatureTitle3.innerText = modalDetail.features["3"].feature_name ? modalDetail.features["3"].feature_name : 'No data found';
 
 
   // for integration
