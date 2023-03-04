@@ -34,7 +34,7 @@ const displayAi = aiHubs =>{
         <p class="fs-6 "><i class="fa-solid fa-calendar-days"></i> ${ai.published_in}</p>
       </div>
       <div>
-      <button type="button" class="btn btn-outline-danger">More Info</button>
+      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#aiInfoModal">More Info</button>
       </div>   
     </div>
     </div>
@@ -72,4 +72,14 @@ else{
 }
 }
 
+// const loadAiDetails = async id =>{
+//   const url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
+//   const res = await fetch(url);
+//     const data = await res.json();
+//     displayAiDetails(data.data);
+// }
+
+// const displayAiDetails = ai =>{
+//   console.log(ai);
+// }
 loadAiHub();
