@@ -116,14 +116,15 @@ const modalDetail= modalDetail =>{
   aiHubFeatureTitle3.innerText = modalDetail.features["3"].feature_name ? modalDetail.features["3"].feature_name : 'No data found';
 
 
-  // for integration
-  const aiHubIntegrationsTitle1= document.getElementById('ai-hub-Integrations1')
-  aiHubIntegrationsTitle1.innerText= modalDetail.integrations[0]
+  // for intregation
+  const aiHubIntegrationsTitle1 = document.getElementById("ai-hub-Integrations1");
+  aiHubIntegrationsTitle1.innerText = modalDetail.integrations[0] ? modalDetail.integrations[0] : 'No data found';
 
-  const aiHubIntegrationsTitle2= document.getElementById('ai-hub-Integrations2')
-  aiHubIntegrationsTitle2.innerText= modalDetail.integrations[1]
-  const aiHubIntegrationsTitle3= document.getElementById('ai-hub-Integrations3')
-  aiHubIntegrationsTitle3.innerText= modalDetail.integrations[2]
+  const aiHubIntegrationsTitle2 = document.getElementById("ai-hub-Integrations2");
+  aiHubIntegrationsTitle2.innerText = modalDetail.integrations[1] ? modalDetail.integrations[1] : 'No data found';
+
+  const aiHubIntegrationsTitle3 = document.getElementById("ai-hub-Integrations3");
+  aiHubIntegrationsTitle3.innerText = modalDetail.integrations[2] ?  modalDetail.integrations[2] : 'No data found' ;
 
 
 // card-2 image and feature
