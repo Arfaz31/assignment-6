@@ -83,31 +83,26 @@ const showAiDetailModal= id =>{
 
 
 const modalDetail= modalDetail =>{
-  const aiModalDescription= document.getElementById('modal-description')
-  aiModalDescription.innerText= modalDetail.description
+  const aiModalDescription = document.getElementById("modal-description");
+  aiModalDescription.innerText = modalDetail.description ? modalDetail.description : 'No data found';
 
-  const planDetailField= document.getElementById('plan-detail')
-  planDetailField.innerText= modalDetail.pricing[0].plan
+  const planDetailField = document.getElementById("plan-detail");
+  planDetailField.innerText = modalDetail.pricing[0].plan ? modalDetail.pricing[0].plan : 'Cost/Basic';
 
-  const priceDetailField= document.getElementById('price-detail')
-  priceDetailField.innerText= modalDetail.pricing[0].price
+  const priceDetailField = document.getElementById("price-detail");
+  priceDetailField.innerText = modalDetail.pricing[0].price ? modalDetail.pricing[0].price : 'Free of Cost' ;
 
-  const planDetailField1= document.getElementById('plan1-detail')
-  planDetailField1.innerText= modalDetail.pricing[1].plan
+  const planDetailField1 = document.getElementById("plan1-detail");
+  planDetailField1.innerText = modalDetail.pricing[1].plan ? modalDetail.pricing[1].plan : 'Cost/Pro' ;
 
+  const priceDetailField1 = document.getElementById("price1-detail");
+  priceDetailField1.innerText = modalDetail.pricing[1].price ?  modalDetail.pricing[1].price : 'Free of Cost';
 
-  const priceDetailField1= document.getElementById('price1-detail')
-  priceDetailField1.innerText= modalDetail.pricing[1].price
-  
+  const planDetailField2 = document.getElementById("plan2-detail");
+  planDetailField2.innerText = modalDetail.pricing[2].plan ? modalDetail.pricing[2].plan : 'Cost/Enterprise';
 
-  const planDetailField2= document.getElementById('plan2-detail')
-  planDetailField2.innerText= modalDetail.pricing[2].plan
-
-
-  const priceDetailField2= document.getElementById('price2-detail')
-  priceDetailField2.innerText= modalDetail.pricing[2].price
-
-  const featuresDetail = document.getElementById('modal-features')
+  const priceDetailField2 = document.getElementById("price2-detail");
+  priceDetailField2.innerText = modalDetail.pricing[2].price ?  modalDetail.pricing[2].price: 'Free of Cost';
 
 
   // for feature
