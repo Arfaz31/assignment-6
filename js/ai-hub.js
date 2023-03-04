@@ -44,17 +44,32 @@ const displayAi = aiHubs =>{
         aiContainer.appendChild(aiDiv);
 
     });
+    toggleSpinner(false);
 }
 
-loadAiHub();
+
+
 
 // show all data
 document.getElementById('btn-see-more').addEventListener('click', function(){
+  
   fetch('https://openapi.programming-hero.com/api/ai/tools')
     .then(response=> response.json())
     .then(data=> displayAi(data.data.tools))
     const hideButton= document.getElementById("see-more");
 hideButton.classList.add('d-none')
-
+toggleSpinner(true);
 })
 
+
+const toggleSpinner = isLoading =>{
+const loaderSection = document.getElementById('loader');
+if(isLoading){
+  loaderSection.classList.remove('d-none')
+}
+else{
+  loaderSection.classList.add('d-none')
+}
+}
+
+loadAiHub();
