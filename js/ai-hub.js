@@ -129,14 +129,26 @@ const modalDetail= modalDetail =>{
   aiHubIntegrationsTitle2.innerText= modalDetail.integrations[1]
   const aiHubIntegrationsTitle3= document.getElementById('ai-hub-Integrations3')
   aiHubIntegrationsTitle3.innerText= modalDetail.integrations[2]
+
+
+  // second div
+const secondDiv = document.getElementById('second-div')
+secondDiv.innerHTML = `
+<div class="card text-bg-dark">
+   <img id="card-img" src="${modalDetail.features.image}" class="card-img" alt="...">
+   <div class="card-img-overlay">
+     <h5 class="card-title">Hi, how are you doing today?</h5>
+   </div>
+</div>
+
+`
   
 }
 
-
-
-
-
 loadAiHub();
+
+
+
 
 
 
